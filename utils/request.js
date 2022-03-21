@@ -9,7 +9,7 @@ const service = axios.create({
   timeout: 15000 // 请求超时时间
 })
 
-// http request 拦截器
+// http request 拦截器de
 service.interceptors.request.use(
   config => {
     // token 先不处理，后续使用时在完善
