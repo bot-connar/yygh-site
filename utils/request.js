@@ -3,6 +3,7 @@ import { MessageBox, Message } from 'element-ui'
 import cookie from 'js-cookie'
 
 // 创建axios实例
+
 const service = axios.create({
   baseURL: 'http://server-gateway.hos:8080', //生产环境
   timeout: 15000 // 请求超时时间
