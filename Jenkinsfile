@@ -46,7 +46,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId : 'docker-registry' ,usernameVariable : 'DOCKER_USERNAME' ,passwordVariable : 'DOCKER_PASSWORD' ,)]) {
                         sh 'echo "$DOCKER_PASSWORD" | docker login $REGISTRY -u "$DOCKER_USERNAME" --password-stdin'
                         sh 'docker tag yygh-site:latest $REGISTRY/$DOCKERHUB_NAMESPACE/yygh-site:SNAPSHOT-$BUILD_NUMBER'
-                        sh 'docker push  $REGISTRY/$DOCKERHUB_NAMESPACE/yygh-site:SNAPSHOT-$BUILD_NUMBER'
+                        //sh 'docker push  $REGISTRY/$DOCKERHUB_NAMESPACE/yygh-site:SNAPSHOT-$BUILD_NUMBER'
                     }
 
                 }
